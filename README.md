@@ -24,6 +24,9 @@ A tabela abaixo mostra o padrão de segmentos ativados para cada dígito BCD:
 > ![Esquema do circuito](https://github.com/Nayetdet/decodificador-display-sete-segmentos/blob/main/imagens/circuito-gerado-digitaljs.png)
 > <br /> Esquema do circuito gerado quando o DigitalJS é executado.
 
+> ![Esquema do circuito](https://github.com/Nayetdet/decodificador-display-sete-segmentos/blob/main/imagens/circuito-gerado-vscode.png)
+> <br /> Esquema do circuito gerado quando o VSCode é executado com a extensão do DigitalJS.
+
 ## Bancada de Testes
 A bancada de testes avalia todos os dígitos possíveis em BCD e exibe os sinais gerados de forma clara. Além disso, gera a forma de onda correspondente do circuito.
 
