@@ -10,7 +10,13 @@ module tb_display_de_sete_segmentos;
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars(0, digito_bcd, segmentos);
-    // Essa variação do $dumpvars faz com que apenas as variáveis "digito_bcd" e "segmentos" apareçam no output da simulação, removendo as variáveis indesejadas
+
+    /*
+    Os argumentos presentes no $dumpvars fazem com que
+    apenas as variáveis "digito_bcd" e "segmentos"
+    apareçam na forma de onda da simulação, removendo
+    as outras variáveis indesejadas.
+    */
 
     for (int i = 0; i < 16; i++) begin
       digito_bcd = i;
@@ -19,7 +25,13 @@ module tb_display_de_sete_segmentos;
       $write("Dígito: %d | Segmentos: ", digito_bcd);
       for (int j = 6; j >= 0; j--) begin
         $write("%c=%b ", "A" + (6 - j), segmentos[j]);
-        // A soma "A" + (6 - j) converte o número (6 - j) para o seu correspondente em código ASCII, gerando as letras que simbolizam cada segmento do display
+
+        /*
+        A soma "A" + (6 - j) converte o número (6 - j)
+        para o seu correspondente em código ASCII, gerando
+        as letras que simbolizam cada segmento do display.
+        */
+
       end
       $display();
     end
